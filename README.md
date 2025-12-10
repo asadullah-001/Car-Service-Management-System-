@@ -10,9 +10,9 @@ This README provides an overview of the system, features, usage instructions, an
 
 Below are some reference images from the application UI:
 
-![Screenshot 1](sediment://file_00000000bab872098979f7c609ad4d23)
-![Screenshot 2](sediment://file_00000000ddb47206b6089fc0c4a1fce6)
-![Screenshot 3](sediment://file_0000000014587206bfd5fdc49715f31b)
+![Screenshot 1][(sediment://file_00000000bab872098979f7c609ad4d23)](https://github.com/asadullah-001/Car-Service-Management-System-/blob/main/main_menu.jpg)
+![Screenshot 2][(sediment://file_00000000ddb47206b6089fc0c4a1fce6)](https://github.com/asadullah-001/Car-Service-Management-System-/blob/main/signup.jpg)
+![Screenshot 3][(sediment://file_0000000014587206bfd5fdc49715f31b)](https://github.com/asadullah-001/Car-Service-Management-System-/blob/main/exit.jpg)
 
 ---
 
