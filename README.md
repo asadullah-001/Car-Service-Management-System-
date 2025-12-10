@@ -1,109 +1,187 @@
-# Car Service Management System
+# 🚗 Car Service Management System
 
-## Description
+A comprehensive command-line application for managing car service appointments, customer interactions, and billing operations. This system supports multiple user roles with distinct functionalities.
 
-This is a console-based Car Service Management System implemented in C. It allows users to sign up, log in, book appointments, manage services, and handle billing for a car service center. The system supports different user roles: Admin, Customer, and Salesperson, each with specific functionalities.
+## 📋 Features
 
-The application uses text files for data persistence, such as storing user credentials, appointments, service history, and billing information.
+### 👥 User Management
+- **Customer Sign Up/Login** - Register and authenticate customers
+- **Salesperson Sign Up** - Admin can create salesperson accounts
+- **Admin Panel** - Full system control with user management
+- **Role-Based Access** - Different menus for Admin, Customer, and Salesperson
 
-## Features
+### 📅 Appointment Management
+- **Book Appointments** - Customers can schedule service appointments
+- **View Appointments** - All users can view scheduled appointments
+- **Search Appointments** - Search by customer name
+- **Delete Appointments** - Admin can remove appointments
 
-- **User Authentication**:
-  - Customer Sign Up
-  - Salesperson Sign Up (Admin only)
-  - Login for Admin, Customers, and Salespersons
+### 🔧 Service Operations
+- **Service Selection** - Assign services to appointments
+- **Service Pricing** - Predefined service catalog with pricing
+- **Service History** - Track all assigned services
+- **Edit/Delete Services** - Modify or remove assigned services
 
-- **Admin Panel**:
-  - View all users
-  - Delete users
-  - Sign up salespersons
-  - View, delete, and search appointments
-  - Assign, view, delete, and edit services
-  - View service pricing
-  - Generate bills
-  - View billing history
-  - Print receipts
+### 💰 Billing System
+- **Generate Bills** - Create detailed invoices with 10% tax
+- **Billing History** - View all generated bills
+- **Print Receipts** - Print formatted receipts
+- **Automatic Calculation** - Price + tax calculations
 
-- **Customer Menu**:
-  - Book appointments
-  - View appointments
+## 👨‍💼 User Roles
 
-- **Salesperson Panel**:
-  - View appointments
-  - Assign services to appointments
-  - View, delete, and edit assigned services
-  - View service pricing
-  - Generate bills
-  - View billing history
-  - Print receipts
+### 1. **Admin**
+- View/Delete users
+- Create salesperson accounts
+- Manage appointments
+- Assign and edit services
+- Generate and view bills
+- Full system access
 
-- **Service Management**:
-  - Predefined services with pricing (e.g., Oil Change, Car Wash)
-  - Assign services to appointments
-  - Edit or delete assigned services
+### 2. **Customer**
+- Sign up for an account
+- Book appointments
+- View scheduled appointments
 
-- **Appointment Management**:
-  - Book, view, search, and delete appointments
+### 3. **Salesperson**
+- View appointments
+- Assign services to appointments
+- Manage assigned services
+- Generate bills and receipts
+- View billing history
 
-- **Billing**:
-  - Generate bills based on services
-  - View billing history
-  - Print receipts
+## 📁 File Structure
 
-## Screenshots
+```
+Car Service Management System/
+├── Car Service Management System.c    # Main source code
+├── users.txt                          # User credentials storage
+├── appointments.txt                   # Appointment records
+├── service_history.txt               # Assigned services log
+├── billing.txt                       # Billing records
+├── README.md                         # This file
+└── Screenshots/                      # Program screenshots
+    ├── Screenshot 2025-12-10 214815.jpg
+    ├── Screenshot 2025-12-10 214919.jpg
+    ├── Screenshot 2025-12-10 215028.jpg
+    └── Screenshot 2025-12-10 215057.jpg
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+- GCC Compiler or any C compiler
+- Windows/Linux/macOS system
+- Basic terminal/command prompt knowledge
+
+### Compilation
+```bash
+gcc "Car Service Management System.c" -o car_service_system
+```
+
+### Execution
+```bash
+./car_service_system      # Linux/macOS
+car_service_system.exe    # Windows
+```
+
+### Default Admin Credentials
+- **Username:** `admin`
+- **Password:** `5410`
+
+## 🛠️ Service Catalog
+
+The system includes predefined services with pricing:
+
+1. **Oil Change** - $50.00
+2. **Car Wash** - $30.00
+3. **General Service** - $120.00
+4. **Interior Clean** - $40.00
+5. **Engine Service** - $200.00
+
+*Note: All services include 10% tax*
+
+## 📸 Screenshots
 
 ### Main Menu
-![Main Menu](main_menu.png)
+![Main Menu](Screenshots/Screenshot%202025-12-10%20214815.jpg)
 
 ### Customer Sign Up
-![Customer Sign Up](signup.png)
+![Customer Sign Up](Screenshots/Screenshot%202025-12-10%20214919.jpg)
 
-### Login
-![Login](login.png)
+### Successful Login
+![Login Success](Screenshots/Screenshot%202025-12-10%20215028.jpg)
 
-### Exit
-![Exit](exit.png)
+### Program Exit
+![Exit Screen](Screenshots/Screenshot%202025-12-10%20215057.jpg)
 
-## Requirements
+## 🔒 Security Features
 
-- C Compiler (e.g., GCC)
-- Operating System: Windows (for `cls` command) or Unix-like (for `clear` command). The code handles both via macros.
+- Password protection for all accounts
+- Admin-only user management
+- Role-based menu access
+- File-based data persistence
+- Input validation and error handling
 
-## Installation
+## 📊 Data Persistence
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/car-service-management-system.git
-   ```
+All data is stored in text files:
+- **User data** → `users.txt`
+- **Appointments** → `appointments.txt`
+- **Service history** → `service_history.txt`
+- **Billing records** → `billing.txt`
 
-2. Navigate to the project directory:
-   ```
-   cd car-service-management-system
-   ```
+## 🐛 Error Handling
 
-3. Compile the code:
-   ```
-   gcc "Car Service Management System.c" -o car_service_system
-   ```
+- Invalid input detection
+- File operation error checking
+- User existence validation
+- Boundary condition checks
+- Memory buffer overflow prevention
 
-## Usage
+## 🔧 Technical Details
 
-Run the executable:
-- On Windows: `car_service_system.exe`
-- On Unix: `./car_service_system`
+- **Language:** C
+- **Paradigm:** Procedural Programming
+- **Data Structures:** Arrays, Structures
+- **File Handling:** Text file I/O operations
+- **Platform:** Cross-platform (Windows/Linux/macOS)
 
-Follow the on-screen prompts to navigate through the menus.
+## 🤝 Contributing
 
-**Note**: Data is stored in text files in the same directory (e.g., `users.txt`, `appointments.txt`). Ensure write permissions.
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
 
-Admin credentials:
-- Username: admin
-- Password: 5410
+## 📄 License
 
-## Contributing
+This project is open source and available for educational purposes.
 
-Contributions are welcome! Please fork the repository and submit a pull request.
+## 👤 Author
 
-## License
+**Car Service Management System**
+- Developed as a comprehensive C programming project
+- Demonstrates file handling, user management, and billing systems
 
-This project is licensed under the MIT License.
+## ⚠️ Notes
+
+- This is a console-based application
+- No graphical user interface
+- Data is stored in plain text files
+- For educational and demonstration purposes
+
+## 🎯 Future Enhancements
+
+Potential improvements could include:
+- Database integration
+- Graphical user interface
+- Email notifications
+- Advanced reporting
+- Inventory management
+- Customer feedback system
+
+---
+
+*For any queries or issues, please check the code documentation or create an issue in the repository.*
